@@ -61,7 +61,9 @@ export function Newsletter() {
 
               </p>
 
-              <div className="mt-12">              <form className="mx-auto flex max-w-2xl flex-col gap-4 sm:flex-row">
+              <div className="mt-12">
+
+                <form className="mx-auto flex max-w-2xl flex-col gap-4 sm:flex-row">
 
                 <input
                   type="email"
@@ -85,6 +87,8 @@ export function Newsletter() {
                 No spam. Only premium project launches, construction updates,
                 exclusive offers and real estate insights from Manjeet Pride Group.
               </p>
+
+            </div>
 
             </div>
 
