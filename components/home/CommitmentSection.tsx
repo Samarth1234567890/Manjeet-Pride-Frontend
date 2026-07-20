@@ -164,6 +164,8 @@ export function CommitmentSection() {
         </div>
 
       </div>
+
+      </div>
     </section>
   );
 }
