@@ -8,7 +8,7 @@ interface CountUpProps {
   suffix?: string;
   decimals?: number;
   value: number;
-  duration?: number;
+  duration: number;
   className?: string;
 }
 
@@ -16,6 +16,7 @@ export function CountUp({
   end,
   suffix = "",
   decimals = 0,
+  value,
   duration = 2000,
   className,
 }: CountUpProps) {

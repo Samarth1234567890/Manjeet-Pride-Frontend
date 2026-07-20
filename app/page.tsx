@@ -24,7 +24,7 @@ export default function HomePage() {
             {STATS.map((stat) => (
               <StaggerItem key={stat.label} className="text-center sm:text-left">
                 <div className="font-serif text-5xl font-light text-primary sm:text-6xl">
-                  <CountUp end={stat.value} suffix={stat.suffix} decimals={stat.value % 1 !== 0 ? 1 : 0} value={0} />
+                  <CountUp end={stat.value} suffix={stat.suffix} decimals={stat.value % 1 !== 0 ? 1 : 0} value={0} duration={2.5} />
                 </div>
                 <div className="mt-3 text-[0.7rem] uppercase tracking-[0.25em] text-muted-foreground">
                   {stat.label}
