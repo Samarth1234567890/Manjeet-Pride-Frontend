@@ -14,7 +14,7 @@ export default function NotFound() {
             The page you were looking for may have moved, been renamed, or never existed.
           </p>
           <div className="mt-10 flex justify-center">
-            <MagneticButton href="/" variant="gold">
+            <MagneticButton href="/" variant="primary" className="px-6 py-3 text-lg font-medium">
               Return Home
             </MagneticButton>
           </div>
