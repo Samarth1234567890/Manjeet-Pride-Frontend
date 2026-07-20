@@ -100,9 +100,8 @@ export function LegacyStats() {
                 <h3 className="font-serif text-5xl text-[#C9A54C]">
 
                   <CountUp
-                    end={stat.value}
-                    duration={2.5}
-                  />
+                                end={stat.value}
+                                duration={2.5} value={0}                  />
 
                   {stat.suffix}
 
