@@ -5,12 +5,9 @@ import { Reveal } from "@/components/site/Reveal";
 import { SectionTitle } from "@/components/site/SectionTitle";
 import { CTASection } from "@/components/site/CTASection";
 
-import FeaturedNews from "@/components/news/FeaturedNews";
-import LatestNews from "@/components/news/LatestNews";
-import NewsCategories from "@/components/news/NewsCategories";
-import ConstructionUpdates from "@/components/news/ConstructionUpdates";
-import PressReleases from "@/components/news/PressReleases";
-import NewsArchive from "@/components/news/NewsArchive";
+import FeaturedNews from "@/components/media/FeaturedArticle";
+import LatestNews from "@/components/media/LatestNews";
+import NewsCategories from "@/components/media/MediaCategories";
 
 export const metadata: Metadata = {
   title: "News",
@@ -55,19 +52,7 @@ export default function NewsPage() {
         <NewsCategories />
       </Reveal>
 
-      <Reveal>
-        <ConstructionUpdates />
-      </Reveal>
-
-      <Reveal>
-        <PressReleases />
-      </Reveal>
-
-      <Reveal>
-        <NewsArchive />
-      </Reveal>
-
-      <CTASection />
+      <CTASection title={""} description={""} buttonText={""} href={""} />
     </SiteShell>
   );
 }
