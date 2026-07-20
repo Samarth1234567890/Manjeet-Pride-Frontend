@@ -16,6 +16,8 @@ export interface SocialLinks {
 }
 
 export interface SiteInfo {
+  ogImage: string | URL;
+  description: string | null | undefined;
   social: SocialLinks;
   name: string;
   tagline: string;
@@ -99,6 +101,8 @@ export const SITE: SiteInfo = {
   mapEmbedQuery: "Manjeet Pride Group Pune",
 
   social: SOCIAL_LINKS,
+  ogImage: "",
+  description: undefined
 };
 
 // ==============================

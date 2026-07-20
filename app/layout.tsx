@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: `${SITE.name} — ${SITE.tagline}`,
     template: `%s · ${SITE.name}`,
   },
-  description: SITE.description,
+  description: SITE.description ?? undefined,
   keywords: [
     'Manjeet Pride Group',
     'luxury real estate',
@@ -35,14 +35,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title: `${SITE.name} — ${SITE.tagline}`,
-    description: SITE.description,
+    description: SITE.description ?? undefined,
     siteName: SITE.name,
     images: [{ url: SITE.ogImage }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${SITE.name} — ${SITE.tagline}`,
-    description: SITE.description,
+    description: SITE.description ?? undefined,
     images: [SITE.ogImage],
   },
   icons: {
