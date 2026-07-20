@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Luxury palette — Manjeet Pride blue + gold accents on warm ivory */
+    --background: 40 33% 98%;          /* warm ivory */
+    --foreground: 220 16% 16%;          /* deep slate charcoal */
+    --card: 0 0% 100%;
+    --card-foreground: 220 16% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 16% 16%;
+    --primary: 222 56% 26%;             /* premium deep blue (logo-inspired) */
+    --primary-foreground: 40 33% 98%;
+    --secondary: 220 10% 95%;
+    --secondary-foreground: 220 16% 16%;
+    --muted: 220 10% 94%;
+    --muted-foreground: 220 10% 42%;
+    --accent: 43 74% 49%;               /* luxury gold */
+    --accent-foreground: 220 16% 16%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 12% 88%;
+    --input: 220 12% 86%;
+    --ring: 222 56% 26%;
+    --chart-1: 222 56% 26%;
+    --chart-2: 43 74% 49%;
+    --chart-3: 173 40% 38%;
+    --chart-4: 12 70% 55%;
+    --chart-5: 280 50% 55%;
+    --radius: 0.25rem;
+  }
+  .dark {
+    --background: 220 24% 8%;
+    --foreground: 40 30% 96%;
+    --card: 220 22% 11%;
+    --card-foreground: 40 30% 96%;
+    --popover: 220 22% 11%;
+    --popover-foreground: 40 30% 96%;
+    --primary: 217 72% 56%;
+    --primary-foreground: 220 24% 8%;
+    --secondary: 220 18% 16%;
+    --secondary-foreground: 40 30% 96%;
+    --muted: 220 18% 16%;
+    --muted-foreground: 220 12% 65%;
+    --accent: 43 74% 49%;
+    --accent-foreground: 220 24% 8%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 40 30% 96%;
+    --border: 220 18% 20%;
+    --input: 220 18% 22%;
+    --ring: 217 72% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "ss01", "cv01", "kern";
+  }
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+  .eyebrow {
+    @apply font-sans text-xs uppercase tracking-ultra-wide text-accent;
+  }
+  .display-serif {
+    @apply font-serif font-light leading-[1.05] tracking-tight;
+  }
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-xl border border-white/60 shadow-[0_8px_40px_-12px_rgba(28,52,92,0.18)];
+  }
+  .glass-dark {
+    @apply bg-primary/85 backdrop-blur-xl border border-white/10 text-primary-foreground;
+  }
+  .hairline {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+  .gold-line {
+    @apply h-px bg-gradient-to-r from-transparent via-accent to-transparent;
+  }
+  .luxury-underline {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .luxury-underline:hover {
+    background-size: 100% 1px;
+  }
+  .text-shadow-luxury {
+    text-shadow: 0 2px 30px rgba(0, 0, 0, 0.35);
+  }
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.7);
+}
+
+/* Hide scrollbar utility for horizontal scrollers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
